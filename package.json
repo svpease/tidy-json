@@ -1,6 +1,6 @@
 {
   "name": "tidy-json",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Simple recursive serializer of a JSON object into a string with newlines and spaces.",
   "main": "index.js",
   "scripts": {
