@@ -1,0 +1,27 @@
+{
+  "name": "tidy-json",
+  "version": "1.0.0",
+  "description": "Simple recursive serializer of a JSON object into a string with newlines and spaces.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svpease/tidy-json.git"
+  },
+  "keywords": [
+    "json",
+    "tidy",
+    "pretty",
+    "prettifier",
+    "prettyprint",
+    "beautifier"
+  ],
+  "author": "Steven Pease",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/svpease/tidy-json/issues"
+  },
+  "homepage": "https://github.com/svpease/tidy-json#readme"
+}

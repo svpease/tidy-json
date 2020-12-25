@@ -2,7 +2,7 @@ const indentSpaces = 2;
 
 const spacesPrefix = numberOfSpaces => ' '.repeat(numberOfSpaces);
 
-export default (json, spaces = 0) => {
+export default const tidyjson = (json, spaces = 0) => {
   let result = '';
 
   if (Array.isArray(json)) {
@@ -10,7 +10,7 @@ export default (json, spaces = 0) => {
 
     result += '[\n';
     json.forEach(arrayItem => {
-      result += spacesPrefix(spaces + indentSpaces) + print(arrayItem, spaces + indentSpaces);
+      result += spacesPrefix(spaces + indentSpaces) + tidyjson(arrayItem, spaces + indentSpaces);
     });
     result += spacesPrefix(spaces) + ']\n';
   }
@@ -23,7 +23,7 @@ export default (json, spaces = 0) => {
 
     result += '{\n';
     keys.forEach(objectKey => {
-      result += spacesPrefix(spaces + indentSpaces) + `"${objectKey}": ` + print(json[objectKey], spaces + indentSpaces);
+      result += spacesPrefix(spaces + indentSpaces) + `"${objectKey}": ` + tidyjson(json[objectKey], spaces + indentSpaces);
     });
     result += spacesPrefix(spaces) + '}\n';
   }
