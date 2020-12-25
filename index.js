@@ -2,7 +2,7 @@ const indentSpaces = 2;
 
 const spacesPrefix = numberOfSpaces => ' '.repeat(numberOfSpaces);
 
-export default const tidyjson = (json, spaces = 0) => {
+const tidyjson = (json, spaces = 0) => {
   let result = '';
 
   if (Array.isArray(json)) {
@@ -36,3 +36,5 @@ export default const tidyjson = (json, spaces = 0) => {
 
   return result;
 };
+
+export default tidyjson;
